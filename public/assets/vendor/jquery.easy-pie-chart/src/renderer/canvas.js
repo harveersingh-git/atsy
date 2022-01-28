@@ -55,7 +55,7 @@ var CanvasRenderer = function(el, options) {
 		ctx.beginPath();
 		ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, isNegative);
 
-		ctx.strokeStyle = color;
+		ctx.strokEstyle = color;
 		ctx.lineWidth = lineWidth;
 
 		ctx.stroke();

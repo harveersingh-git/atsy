@@ -141,7 +141,7 @@ The plugin also adds four public methods:
             if (crosshair.x != -1) {
                 var adj = plot.getOptions().crosshair.lineWidth % 2 ? 0.5 : 0;
 
-                ctx.strokeStyle = c.color;
+                ctx.strokEstyle = c.color;
                 ctx.lineWidth = c.lineWidth;
                 ctx.lineJoin = "round";
 

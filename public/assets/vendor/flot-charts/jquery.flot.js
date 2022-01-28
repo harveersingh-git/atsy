@@ -2003,7 +2003,7 @@ Licensed under the MIT license.
                         var lineWidth = m.lineWidth || options.grid.markingsLineWidth,
                             subPixel = lineWidth % 2 ? 0.5 : 0;
                         ctx.beginPath();
-                        ctx.strokeStyle = m.color || options.grid.markingsColor;
+                        ctx.strokEstyle = m.color || options.grid.markingsColor;
                         ctx.lineWidth = lineWidth;
                         if (xequal) {
                             ctx.moveTo(xrange.to + subPixel, yrange.from);
@@ -2052,7 +2052,7 @@ Licensed under the MIT license.
 
                 // draw tick bar
                 if (!axis.innermost) {
-                    ctx.strokeStyle = axis.options.color;
+                    ctx.strokEstyle = axis.options.color;
                     ctx.beginPath();
                     xoff = yoff = 0;
                     if (axis.direction == "x")
@@ -2075,7 +2075,7 @@ Licensed under the MIT license.
 
                 // draw ticks
 
-                ctx.strokeStyle = axis.options.tickColor;
+                ctx.strokEstyle = axis.options.tickColor;
 
                 ctx.beginPath();
                 for (i = 0; i < axis.ticks.length; ++i) {
@@ -2134,7 +2134,7 @@ Licensed under the MIT license.
                     }
 
                     if (bw.top > 0) {
-                        ctx.strokeStyle = bc.top;
+                        ctx.strokEstyle = bc.top;
                         ctx.lineWidth = bw.top;
                         ctx.beginPath();
                         ctx.moveTo(0 - bw.left, 0 - bw.top/2);
@@ -2143,7 +2143,7 @@ Licensed under the MIT license.
                     }
 
                     if (bw.right > 0) {
-                        ctx.strokeStyle = bc.right;
+                        ctx.strokEstyle = bc.right;
                         ctx.lineWidth = bw.right;
                         ctx.beginPath();
                         ctx.moveTo(plotWidth + bw.right / 2, 0 - bw.top);
@@ -2152,7 +2152,7 @@ Licensed under the MIT license.
                     }
 
                     if (bw.bottom > 0) {
-                        ctx.strokeStyle = bc.bottom;
+                        ctx.strokEstyle = bc.bottom;
                         ctx.lineWidth = bw.bottom;
                         ctx.beginPath();
                         ctx.moveTo(plotWidth + bw.right, plotHeight + bw.bottom / 2);
@@ -2161,7 +2161,7 @@ Licensed under the MIT license.
                     }
 
                     if (bw.left > 0) {
-                        ctx.strokeStyle = bc.left;
+                        ctx.strokEstyle = bc.left;
                         ctx.lineWidth = bw.left;
                         ctx.beginPath();
                         ctx.moveTo(0 - bw.left/2, plotHeight + bw.bottom);
@@ -2171,7 +2171,7 @@ Licensed under the MIT license.
                 }
                 else {
                     ctx.lineWidth = bw;
-                    ctx.strokeStyle = options.grid.borderColor;
+                    ctx.strokEstyle = options.grid.borderColor;
                     ctx.strokeRect(-bw/2, -bw/2, plotWidth + bw, plotHeight + bw);
                 }
             }
@@ -2470,7 +2470,7 @@ Licensed under the MIT license.
             if (lw > 0 && sw > 0) {
                 // draw shadow as a thick and thin line with transparency
                 ctx.lineWidth = sw;
-                ctx.strokeStyle = "rgba(0,0,0,0.1)";
+                ctx.strokEstyle = "rgba(0,0,0,0.1)";
                 // position shadow at angle from the mid of line
                 var angle = Math.PI/18;
                 plotLine(series.datapoints, Math.sin(angle) * (lw/2 + sw/2), Math.cos(angle) * (lw/2 + sw/2), series.xaxis, series.yaxis);
@@ -2479,7 +2479,7 @@ Licensed under the MIT license.
             }
 
             ctx.lineWidth = lw;
-            ctx.strokeStyle = series.color;
+            ctx.strokEstyle = series.color;
             var fillStyle = getFillStyle(series.lines, series.color, 0, plotHeight);
             if (fillStyle) {
                 ctx.fillStyle = fillStyle;
@@ -2537,17 +2537,17 @@ Licensed under the MIT license.
                 // draw shadow in two steps
                 var w = sw / 2;
                 ctx.lineWidth = w;
-                ctx.strokeStyle = "rgba(0,0,0,0.1)";
+                ctx.strokEstyle = "rgba(0,0,0,0.1)";
                 plotPoints(series.datapoints, radius, null, w + w/2, true,
                            series.xaxis, series.yaxis, symbol);
 
-                ctx.strokeStyle = "rgba(0,0,0,0.2)";
+                ctx.strokEstyle = "rgba(0,0,0,0.2)";
                 plotPoints(series.datapoints, radius, null, w/2, true,
                            series.xaxis, series.yaxis, symbol);
             }
 
             ctx.lineWidth = lw;
-            ctx.strokeStyle = series.color;
+            ctx.strokEstyle = series.color;
             plotPoints(series.datapoints, radius,
                        getFillStyle(series.points, series.color), 0, false,
                        series.xaxis, series.yaxis, symbol);
@@ -2675,7 +2675,7 @@ Licensed under the MIT license.
 
             // FIXME: figure out a way to add shadows (for instance along the right edge)
             ctx.lineWidth = series.bars.lineWidth;
-            ctx.strokeStyle = series.color;
+            ctx.strokEstyle = series.color;
 
             var barLeft;
 
@@ -3075,7 +3075,7 @@ Licensed under the MIT license.
 
             var pointRadius = series.points.radius + series.points.lineWidth / 2;
             octx.lineWidth = pointRadius;
-            octx.strokeStyle = highlightColor;
+            octx.strokEstyle = highlightColor;
             var radius = 1.5 * pointRadius;
             x = axisx.p2c(x);
             y = axisy.p2c(y);
@@ -3106,7 +3106,7 @@ Licensed under the MIT license.
             }
 
             octx.lineWidth = series.bars.lineWidth;
-            octx.strokeStyle = highlightColor;
+            octx.strokEstyle = highlightColor;
 
             drawBar(point[0], point[1], point[2] || 0, barLeft, barLeft + series.bars.barWidth,
                     function () { return fillStyle; }, series.xaxis, series.yaxis, octx, series.bars.horizontal, series.bars.lineWidth);

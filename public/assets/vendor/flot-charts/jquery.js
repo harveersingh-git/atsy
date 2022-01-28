@@ -6877,11 +6877,11 @@ if ( window.getComputedStyle ) {
 
 			// Remember the original values
 			left = style.left;
-			rsLeft = elem.runtimeStyle && elem.runtimeStyle.left;
+			rsLeft = elem.runtimEstyle && elem.runtimEstyle.left;
 
 			// Put in the new values to get a computed value out
 			if ( rsLeft ) {
-				elem.runtimeStyle.left = elem.currentStyle.left;
+				elem.runtimEstyle.left = elem.currentStyle.left;
 			}
 			style.left = name === "fontSize" ? "1em" : ret;
 			ret = style.pixelLeft + "px";
@@ -6889,7 +6889,7 @@ if ( window.getComputedStyle ) {
 			// Revert the changed values
 			style.left = left;
 			if ( rsLeft ) {
-				elem.runtimeStyle.left = rsLeft;
+				elem.runtimEstyle.left = rsLeft;
 			}
 		}
 

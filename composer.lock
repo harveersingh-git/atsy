@@ -5122,12 +5122,12 @@
             "version": "2.2.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
+                "url": "https://github.com/tijsverkoyen/CssToInlinEstyles.git",
                 "reference": "da444caae6aca7a19c0c140f68c6182e337d5b1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/da444caae6aca7a19c0c140f68c6182e337d5b1c",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlinEstyles/zipball/da444caae6aca7a19c0c140f68c6182e337d5b1c",
                 "reference": "da444caae6aca7a19c0c140f68c6182e337d5b1c",
                 "shasum": ""
             },
@@ -5148,7 +5148,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "TijsVerkoyen\\CssToInlineStyles\\": "src"
+                    "TijsVerkoyen\\CssToInlinEstyles\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5162,11 +5162,11 @@
                     "role": "Developer"
                 }
             ],
-            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
-            "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
+            "description": "CssToInlinEstyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
+            "homepage": "https://github.com/tijsverkoyen/CssToInlinEstyles",
             "support": {
-                "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
-                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.4"
+                "issues": "https://github.com/tijsverkoyen/CssToInlinEstyles/issues",
+                "source": "https://github.com/tijsverkoyen/CssToInlinEstyles/tree/2.2.4"
             },
             "time": "2021-12-08T09:12:39+00:00"
         },

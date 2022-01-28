@@ -10,7 +10,7 @@ $(function() {
             name: 'series-WebDesign',
             data: [200, 380, 350, 320, 410, 450, 570, 400, 555, 620, 750, 900],
         }, {
-            name: 'series-Lifestyle',
+            name: 'series-LifEstyle',
             data: [89, 350, 360, 380, 315, 425, 466, 502, 520, 629, 725, 402],            
         }, {
             name: 'series-Sports',
@@ -38,7 +38,7 @@ $(function() {
 
         plugins: [
             Chartist.plugins.legend({
-                legendNames: ['WebDesign', 'Lifestyle', 'Sports', 'News']
+                legendNames: ['WebDesign', 'LifEstyle', 'Sports', 'News']
             })
         ]
     };

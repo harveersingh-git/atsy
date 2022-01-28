@@ -102,7 +102,7 @@ if (!document.createElement('canvas').getContext) {
 
     // Setup default CSS.  Only add one style sheet per document
     if (!doc.styleSheets['ex_canvas_']) {
-      var ss = doc.createStyleSheet();
+      var ss = doc.creatEstyleSheet();
       ss.owningElement.id = 'ex_canvas_';
       ss.cssText = 'canvas{display:inline-block;overflow:hidden;' +
           // default size is 300x150 in Gecko and Opera
@@ -156,14 +156,14 @@ if (!document.createElement('canvas').getContext) {
 
         var attrs = el.attributes;
         if (attrs.width && attrs.width.specified) {
-          // TODO: use runtimeStyle and coordsize
+          // TODO: use runtimEstyle and coordsize
           // el.getContext().setWidth_(attrs.width.nodeValue);
           el.style.width = attrs.width.nodeValue + 'px';
         } else {
           el.width = el.clientWidth;
         }
         if (attrs.height && attrs.height.specified) {
-          // TODO: use runtimeStyle and coordsize
+          // TODO: use runtimEstyle and coordsize
           // el.getContext().setHeight_(attrs.height.nodeValue);
           el.style.height = attrs.height.nodeValue + 'px';
         } else {
@@ -246,7 +246,7 @@ if (!document.createElement('canvas').getContext) {
     o2.shadowColor   = o1.shadowColor;
     o2.shadowOffsetX = o1.shadowOffsetX;
     o2.shadowOffsetY = o1.shadowOffsetY;
-    o2.strokeStyle   = o1.strokeStyle;
+    o2.strokEstyle   = o1.strokEstyle;
     o2.globalAlpha   = o1.globalAlpha;
     o2.font          = o1.font;
     o2.textAlign     = o1.textAlign;
@@ -575,7 +575,7 @@ if (!document.createElement('canvas').getContext) {
     this.currentPath_ = [];
 
     // Canvas context properties
-    this.strokeStyle = '#000';
+    this.strokEstyle = '#000';
     this.fillStyle = '#000';
 
     this.lineWidth = 1;
@@ -772,18 +772,18 @@ if (!document.createElement('canvas').getContext) {
     var dx, dy, dw, dh, sx, sy, sw, sh;
 
     // to find the original width we overide the width and height
-    var oldRuntimeWidth = image.runtimeStyle.width;
-    var oldRuntimeHeight = image.runtimeStyle.height;
-    image.runtimeStyle.width = 'auto';
-    image.runtimeStyle.height = 'auto';
+    var oldRuntimeWidth = image.runtimEstyle.width;
+    var oldRuntimeHeight = image.runtimEstyle.height;
+    image.runtimEstyle.width = 'auto';
+    image.runtimEstyle.height = 'auto';
 
     // get the original size
     var w = image.width;
     var h = image.height;
 
     // and remove overides
-    image.runtimeStyle.width = oldRuntimeWidth;
-    image.runtimeStyle.height = oldRuntimeHeight;
+    image.runtimEstyle.width = oldRuntimeWidth;
+    image.runtimEstyle.height = oldRuntimeHeight;
 
     if (arguments.length == 3) {
       dx = arguments[1];
@@ -976,7 +976,7 @@ if (!document.createElement('canvas').getContext) {
   };
 
   function appendStroke(ctx, lineStr) {
-    var a = processStyle(ctx.strokeStyle);
+    var a = processStyle(ctx.strokEstyle);
     var color = a.color;
     var opacity = a.alpha * ctx.globalAlpha;
     var lineWidth = ctx.lineScale_ * ctx.lineWidth;

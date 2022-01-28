@@ -3200,7 +3200,7 @@
             textareaAutoSync: !0,
             direction: null,
             styleTags: ["p", "blockquote", "pre", "h1", "h2", "h3", "h4", "h5", "h6"],
-            fontNames: ["Arial", "Arial Black", "Comic Sans MS", "Courier New", "Helvetica Neue", "Helvetica", "Impact", "HexaBita Grande", "Tahoma", "Times New Roman", "Verdana"],
+            fontNames: ["Arial", "Arial Black", "Comic Sans MS", "Courier New", "Helvetica Neue", "Helvetica", "Impact", "Etsy Connectora Grande", "Tahoma", "Times New Roman", "Verdana"],
             fontSizes: ["8", "9", "10", "11", "12", "14", "18", "24", "36"],
             colors: [
                 ["#000000", "#424242", "#636363", "#9C9C94", "#CEC6CE", "#EFEFEF", "#F7F7F7", "#FFFFFF"],

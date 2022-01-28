@@ -1,4 +1,4 @@
-window.hexabit= {
+window.Etsy Connector= {
     colors: {
         'blue': '#467fcf',
         'blue-darkest': '#0e1929',
@@ -115,9 +115,9 @@ $(function() {
                 ],
                 type: 'line', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["orange"],
-                    'data2': hexabit.colors["blue"],
-                    'data3': hexabit.colors["green"]
+                    'data1': Etsy Connector.colors["orange"],
+                    'data2': Etsy Connector.colors["blue"],
+                    'data3': Etsy Connector.colors["green"]
                 },
                 names: {
                     // name of each serie
@@ -154,8 +154,8 @@ $(function() {
                 labels: true,
                 type: 'line', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["green"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["green"]
                 },
                 names: {
                     // name of each serie
@@ -190,8 +190,8 @@ $(function() {
                 ],
                 type: 'area', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -226,8 +226,8 @@ $(function() {
                 ],
                 type: 'area-spline', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -265,8 +265,8 @@ $(function() {
                     [ 'data1', 'data2']
                 ],
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -302,8 +302,8 @@ $(function() {
                 labels: true,
                 type: 'spline', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["green"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["green"]
                 },
                 names: {
                     // name of each serie
@@ -338,8 +338,8 @@ $(function() {
                 ],
                 type: 'spline', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -375,8 +375,8 @@ $(function() {
                 ],
                 type: 'step', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -411,8 +411,8 @@ $(function() {
                 ],
                 type: 'area-step', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -447,8 +447,8 @@ $(function() {
                 ],
                 type: 'bar', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -486,8 +486,8 @@ $(function() {
                 ],
                 type: 'bar', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -529,8 +529,8 @@ $(function() {
                     [ 'data1', 'data2']
                 ],
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -570,10 +570,10 @@ $(function() {
                 ],
                 type: 'pie', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue-darker"],
-                    'data2': hexabit.colors["blue"],
-                    'data3': hexabit.colors["blue-light"],
-                    'data4': hexabit.colors["blue-lighter"]
+                    'data1': Etsy Connector.colors["blue-darker"],
+                    'data2': Etsy Connector.colors["blue"],
+                    'data3': Etsy Connector.colors["blue-light"],
+                    'data4': Etsy Connector.colors["blue-lighter"]
                 },
                 names: {
                     // name of each serie
@@ -605,8 +605,8 @@ $(function() {
                 ],
                 type: 'donut', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["green"],
-                    'data2': hexabit.colors["green-light"]
+                    'data1': Etsy Connector.colors["green"],
+                    'data2': Etsy Connector.colors["green-light"]
                 },
                 names: {
                     // name of each serie
@@ -636,8 +636,8 @@ $(function() {
                 ],
                 type: 'scatter', // default type of chart
                 colors: {
-                    'data1': hexabit.colors["blue"],
-                    'data2': hexabit.colors["pink"]
+                    'data1': Etsy Connector.colors["blue"],
+                    'data2': Etsy Connector.colors["pink"]
                 },
                 names: {
                     // name of each serie
@@ -681,10 +681,10 @@ $(function() {
                     [ 'data1', 'data4']
                 ],
                 colors: {
-                    'data1': hexabit.colors["green"],
-                    'data2': hexabit.colors["pink"],
-                    'data3': hexabit.colors["green"],
-                    'data4': hexabit.colors["blue"]
+                    'data1': Etsy Connector.colors["green"],
+                    'data2': Etsy Connector.colors["pink"],
+                    'data3': Etsy Connector.colors["green"],
+                    'data4': Etsy Connector.colors["blue"]
                 },
                 names: {
                     // name of each serie

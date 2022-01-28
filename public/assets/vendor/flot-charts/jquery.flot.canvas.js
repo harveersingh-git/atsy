@@ -75,7 +75,7 @@ browser, but needs to redraw with canvas text when exporting as an image.
 					for (var styleKey in layerCache) {
 						if (hasOwnProperty.call(layerCache, styleKey)) {
 							var styleCache = layerCache[styleKey],
-								updateStyles = true;
+								updatEstyles = true;
 							for (var key in styleCache) {
 								if (hasOwnProperty.call(styleCache, key)) {
 
@@ -87,10 +87,10 @@ browser, but needs to redraw with canvas text when exporting as an image.
 									// same font and fill styles, we can just change them once
 									// using the values from the first element.
 
-									if (updateStyles) {
+									if (updatEstyles) {
 										context.fillStyle = info.font.color;
 										context.font = info.font.definition;
-										updateStyles = false;
+										updatEstyles = false;
 									}
 
 									for (var i = 0, position; position = positions[i]; i++) {

@@ -3,7 +3,7 @@
 
             <div class="navbar-left">
                 <div class="navbar-btn">
-                    <a href="{{ url('/') }}"><img src="{{asset('assets/images/icon-light.svg')}}" alt="HexaBit Logo" class="img-fluid logo"></a>
+                    <a href="{{ url('/') }}"><img src="{{asset('assets/images/icon-light.svg')}}" alt="Etsy Connector Logo" class="img-fluid logo"></a>
                     <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
                 </div>
                 <a href="javascript:void(0);" class="icon-menu btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>

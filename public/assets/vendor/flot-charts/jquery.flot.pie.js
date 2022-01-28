@@ -429,7 +429,7 @@ More detail and specific examples can be found in the included HTML file.
 					if (fill) {
 						ctx.fillStyle = color;
 					} else {
-						ctx.strokeStyle = color;
+						ctx.strokEstyle = color;
 						ctx.lineJoin = "round";
 					}
 
@@ -551,7 +551,7 @@ More detail and specific examples can be found in the included HTML file.
 
 				layer.save();
 				layer.beginPath();
-				layer.strokeStyle = options.series.pie.stroke.color;
+				layer.strokEstyle = options.series.pie.stroke.color;
 				layer.arc(0, 0, innerRadius, 0, Math.PI * 2, false);
 				layer.stroke();
 				layer.closePath();

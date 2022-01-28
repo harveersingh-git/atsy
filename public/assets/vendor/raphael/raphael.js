@@ -7949,7 +7949,7 @@
         return this;
     };
     elproto.blur = function (size) {
-        var s = this.node.runtimeStyle,
+        var s = this.node.runtimEstyle,
             f = s.filter;
         f = f.replace(blurregexp, E);
         if (+size !== 0) {
@@ -8136,7 +8136,7 @@
     R._engine.initWin = function (win) {
             var doc = win.document;
             if (doc.styleSheets.length < 31) {
-                doc.createStyleSheet().addRule(".rvml", "behavior:url(#default#VML)");
+                doc.creatEstyleSheet().addRule(".rvml", "behavior:url(#default#VML)");
             } else {
                 // no more room, add to the existing one
                 // http://msdn.microsoft.com/en-us/library/ms531194%28VS.85%29.aspx

@@ -6419,7 +6419,7 @@ module.exports = function(Chart) {
 					ctx.beginPath();
 
 					ctx.fillStyle = vm.backgroundColor;
-					ctx.strokeStyle = vm.borderColor;
+					ctx.strokEstyle = vm.borderColor;
 					ctx.lineWidth = vm.borderWidth;
 
 					// Corner points, from bottom-left to bottom-right clockwise
@@ -6785,7 +6785,7 @@ module.exports = function(Chart) {
 							return {
 								text: label,
 								fillStyle: fill,
-								strokeStyle: stroke,
+								strokEstyle: stroke,
 								lineWidth: bw,
 								hidden: isNaN(ds.data[i]) || meta.data[i].hidden,
 
@@ -7416,7 +7416,7 @@ module.exports = function(Chart) {
 							return {
 								text: label,
 								fillStyle: fill,
-								strokeStyle: stroke,
+								strokEstyle: stroke,
 								lineWidth: bw,
 								hidden: isNaN(ds.data[i]) || meta.data[i].hidden,
 
@@ -10376,7 +10376,7 @@ module.exports = function(Chart) {
 			// Valid properties to return:
 			// text : text to display
 			// fillStyle : fill of coloured box
-			// strokeStyle: stroke of coloured box
+			// strokEstyle: stroke of coloured box
 			// hidden : if this legend item refers to a hidden item
 			// lineCap : cap style for line
 			// lineDash
@@ -10395,7 +10395,7 @@ module.exports = function(Chart) {
 						lineDashOffset: dataset.borderDashOffset,
 						lineJoin: dataset.borderJoinStyle,
 						lineWidth: dataset.borderWidth,
-						strokeStyle: dataset.borderColor,
+						strokEstyle: dataset.borderColor,
 						pointStyle: dataset.pointStyle,
 
 						// Below is extra data used for toggling the datasets
@@ -10646,7 +10646,7 @@ module.exports = function(Chart) {
 				ctx.textAlign = "left";
 				ctx.textBaseline = 'top';
 				ctx.lineWidth = 0.5;
-				ctx.strokeStyle = fontColor; // for strikethrough effect
+				ctx.strokEstyle = fontColor; // for strikethrough effect
 				ctx.fillStyle = fontColor; // render in correct colour
 				ctx.font = labelFont;
 
@@ -10667,7 +10667,7 @@ module.exports = function(Chart) {
 					ctx.lineDashOffset = itemOrDefault(legendItem.lineDashOffset, lineDefault.borderDashOffset);
 					ctx.lineJoin = itemOrDefault(legendItem.lineJoin, lineDefault.borderJoinStyle);
 					ctx.lineWidth = itemOrDefault(legendItem.lineWidth, lineDefault.borderWidth);
-					ctx.strokeStyle = itemOrDefault(legendItem.strokeStyle, globalDefault.defaultColor);
+					ctx.strokEstyle = itemOrDefault(legendItem.strokEstyle, globalDefault.defaultColor);
 
 					if (ctx.setLineDash) {
 						// IE 9 and 10 do not support line dash
@@ -11594,7 +11594,7 @@ module.exports = function(Chart) {
 			helpers.each(itemsToDraw, function(itemToDraw) {
 				if (gridLines.display) {
 					context.lineWidth = itemToDraw.glWidth;
-					context.strokeStyle = itemToDraw.glColor;
+					context.strokEstyle = itemToDraw.glColor;
 
 					context.beginPath();
 
@@ -11664,7 +11664,7 @@ module.exports = function(Chart) {
 			if (gridLines.drawBorder) {
 				// Draw the line at the edge of the axis
 				context.lineWidth = helpers.getValueAtIndexOrDefault(gridLines.lineWidth, 0);
-				context.strokeStyle = helpers.getValueAtIndexOrDefault(gridLines.color, 0);
+				context.strokEstyle = helpers.getValueAtIndexOrDefault(gridLines.color, 0);
 				var x1 = me.left,
 					x2 = me.right,
 					y1 = me.top,
@@ -12567,7 +12567,7 @@ module.exports = function(Chart) {
 						ctx.fillRect(pt.x, pt.y, bodyFontSize, bodyFontSize);
 
 						// Border
-						ctx.strokeStyle = helpers.color(vm.labelColors[i].borderColor).alpha(opacity).rgbaString();
+						ctx.strokEstyle = helpers.color(vm.labelColors[i].borderColor).alpha(opacity).rgbaString();
 						ctx.strokeRect(pt.x, pt.y, bodyFontSize, bodyFontSize);
 
 						// Inner square
@@ -12733,7 +12733,7 @@ module.exports = function(Chart) {
       ctx.arc(vm.x, vm.y, vm.innerRadius, eA, sA, true);
 
       ctx.closePath();
-      ctx.strokeStyle = vm.borderColor;
+      ctx.strokEstyle = vm.borderColor;
       ctx.lineWidth = vm.borderWidth;
 
       ctx.fillStyle = vm.backgroundColor;
@@ -12888,7 +12888,7 @@ module.exports = function(Chart) {
 			ctx.lineDashOffset = vm.borderDashOffset || globalOptionLineElements.borderDashOffset;
 			ctx.lineJoin = vm.borderJoinStyle || globalOptionLineElements.borderJoinStyle;
 			ctx.lineWidth = vm.borderWidth || globalOptionLineElements.borderWidth;
-			ctx.strokeStyle = vm.borderColor || globalDefaults.defaultColor;
+			ctx.strokEstyle = vm.borderColor || globalDefaults.defaultColor;
 
 			// Stroke Line
 			ctx.beginPath();
@@ -12978,7 +12978,7 @@ module.exports = function(Chart) {
 				return;
 			}
 
-			ctx.strokeStyle = vm.borderColor || defaultColor;
+			ctx.strokEstyle = vm.borderColor || defaultColor;
 			ctx.lineWidth = helpers.getValueOrDefault(vm.borderWidth, globalOpts.elements.point.borderWidth);
 			ctx.fillStyle = vm.backgroundColor || defaultColor;
 
@@ -13022,7 +13022,7 @@ module.exports = function(Chart) {
 
 			ctx.beginPath();
 			ctx.fillStyle = vm.backgroundColor;
-			ctx.strokeStyle = vm.borderColor;
+			ctx.strokEstyle = vm.borderColor;
 			ctx.lineWidth = vm.borderWidth;
 
 			// Corner points, from bottom-left to bottom-right clockwise
@@ -14075,7 +14075,7 @@ module.exports = function(Chart) {
 
 						// Draw circular lines around the scale
 						if (gridLineOpts.display && index !== 0) {
-							ctx.strokeStyle = helpers.getValueAtIndexOrDefault(gridLineOpts.color, index - 1);
+							ctx.strokEstyle = helpers.getValueAtIndexOrDefault(gridLineOpts.color, index - 1);
 							ctx.lineWidth = helpers.getValueAtIndexOrDefault(gridLineOpts.lineWidth, index - 1);
 
 							if (opts.lineArc) {
@@ -14125,7 +14125,7 @@ module.exports = function(Chart) {
 
 				if (!opts.lineArc) {
 					ctx.lineWidth = angleLineOpts.lineWidth;
-					ctx.strokeStyle = angleLineOpts.color;
+					ctx.strokEstyle = angleLineOpts.color;
 
 					var outerDistance = me.getDistanceFromCenterForValue(opts.reverse ? me.min : me.max);
 

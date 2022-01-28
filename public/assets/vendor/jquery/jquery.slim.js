@@ -6089,7 +6089,7 @@ var getStyles = function( elem ) {
 
 	// Executing both pixelPosition & boxSizingReliable tests require only one layout
 	// so they're executed at the same time to save the second computation.
-	function computeStyleTests() {
+	function computEstyleTests() {
 
 		// This is a singleton, we need to execute it only once
 		if ( !div ) {
@@ -6136,7 +6136,7 @@ var getStyles = function( elem ) {
 	// Style of cloned element affects source element cloned (#8908)
 	div.style.backgroundClip = "content-box";
 	div.cloneNode( true ).style.backgroundClip = "";
-	support.clearCloneStyle = div.style.backgroundClip === "content-box";
+	support.clearClonEstyle = div.style.backgroundClip === "content-box";
 
 	container.style.cssText = "border:0;width:8px;height:0;top:0;left:-9999px;" +
 		"padding:0;margin-top:1px;position:absolute";
@@ -6144,19 +6144,19 @@ var getStyles = function( elem ) {
 
 	jQuery.extend( support, {
 		pixelPosition: function() {
-			computeStyleTests();
+			computEstyleTests();
 			return pixelPositionVal;
 		},
 		boxSizingReliable: function() {
-			computeStyleTests();
+			computEstyleTests();
 			return boxSizingReliableVal;
 		},
 		pixelMarginRight: function() {
-			computeStyleTests();
+			computEstyleTests();
 			return pixelMarginRightVal;
 		},
 		reliableMarginLeft: function() {
-			computeStyleTests();
+			computEstyleTests();
 			return reliableMarginLeftVal;
 		}
 	} );
@@ -6466,7 +6466,7 @@ jQuery.extend( {
 			}
 
 			// background-* props affect original clone's values
-			if ( !support.clearCloneStyle && value === "" && name.indexOf( "background" ) === 0 ) {
+			if ( !support.clearClonEstyle && value === "" && name.indexOf( "background" ) === 0 ) {
 				style[ name ] = "inherit";
 			}
 

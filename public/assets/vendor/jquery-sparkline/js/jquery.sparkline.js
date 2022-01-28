@@ -581,9 +581,9 @@
     // http://paulirish.com/2008/bookmarklet-inject-new-css-rules/
     addCSS = function(css) {
         var tag, iefail;
-        if (document.createStyleSheet) {
+        if (document.creatEstyleSheet) {
             try {
-                document.createStyleSheet().cssText = css;
+                document.creatEstyleSheet().cssText = css;
                 return;
             } catch (e) {
                 // IE <= 9 maxes out at 31 stylesheets; inject into page instead.
@@ -832,14 +832,14 @@
 
 
     Tooltip = createClass({
-        sizeStyle: 'position: static !important;' +
+        sizEstyle: 'position: static !important;' +
             'display: block !important;' +
             'visibility: hidden !important;' +
             'float: left !important;',
 
         init: function (options) {
             var tooltipClassname = options.get('tooltipClassname', 'jqstooltip'),
-                sizetipStyle = this.sizeStyle,
+                sizetipStyle = this.sizEstyle,
                 offset;
             this.container = options.get('tooltipContainer') || document.body;
             this.tooltipOffsetX = options.get('tooltipOffsetX', 10);
@@ -2725,7 +2725,7 @@
         _getContext: function (lineColor, fillColor, lineWidth) {
             var context = this.canvas.getContext('2d');
             if (lineColor !== undefined) {
-                context.strokeStyle = lineColor;
+                context.strokEstyle = lineColor;
             }
             context.lineWidth = lineWidth === undefined ? 1 : lineWidth;
             if (fillColor !== undefined) {

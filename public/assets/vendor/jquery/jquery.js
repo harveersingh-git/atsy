@@ -5694,7 +5694,7 @@ var documentElement = document.documentElement;
 	// Style of cloned element affects source element cloned (#8908)
 	div.style.backgroundClip = "content-box";
 	div.cloneNode( true ).style.backgroundClip = "";
-	support.clearCloneStyle = div.style.backgroundClip === "content-box";
+	support.clearClonEstyle = div.style.backgroundClip === "content-box";
 
 	container.style.cssText = "border:0;width:8px;height:0;top:0;left:-9999px;" +
 		"padding:0;margin-top:1px;position:absolute";
@@ -5702,7 +5702,7 @@ var documentElement = document.documentElement;
 
 	// Executing both pixelPosition & boxSizingReliable tests require only one layout
 	// so they're executed at the same time to save the second computation.
-	function computeStyleTests() {
+	function computEstyleTests() {
 		div.style.cssText =
 
 			// Support: Firefox<29, Android 2.3
@@ -5733,12 +5733,12 @@ var documentElement = document.documentElement;
 			// This test is executed only once but we still do memoizing
 			// since we can use the boxSizingReliable pre-computing.
 			// No need to check if the test was already performed, though.
-			computeStyleTests();
+			computEstyleTests();
 			return pixelPositionVal;
 		},
 		boxSizingReliable: function() {
 			if ( boxSizingReliableVal == null ) {
-				computeStyleTests();
+				computEstyleTests();
 			}
 			return boxSizingReliableVal;
 		},
@@ -5748,7 +5748,7 @@ var documentElement = document.documentElement;
 			// We're checking for boxSizingReliableVal here instead of pixelMarginRightVal
 			// since that compresses better and they're computed together anyway.
 			if ( boxSizingReliableVal == null ) {
-				computeStyleTests();
+				computEstyleTests();
 			}
 			return pixelMarginRightVal;
 		},
@@ -5756,7 +5756,7 @@ var documentElement = document.documentElement;
 
 			// Support: IE <=8 only, Android 4.0 - 4.3 only, Firefox <=3 - 37
 			if ( boxSizingReliableVal == null ) {
-				computeStyleTests();
+				computEstyleTests();
 			}
 			return reliableMarginLeftVal;
 		},
@@ -6142,7 +6142,7 @@ jQuery.extend( {
 
 			// Support: IE9-11+
 			// background-* props affect original clone's values
-			if ( !support.clearCloneStyle && value === "" && name.indexOf( "background" ) === 0 ) {
+			if ( !support.clearClonEstyle && value === "" && name.indexOf( "background" ) === 0 ) {
 				style[ name ] = "inherit";
 			}
 

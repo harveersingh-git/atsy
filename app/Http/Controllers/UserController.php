@@ -164,12 +164,30 @@ class UserController extends Controller
             $request->validate([
                 'name' => 'required',
                 'email' => 'required',
+                'mobile' => 'required',
+                'last_name' => 'required',
             ]);
-
-            $user->update([
-                'name' => $input['name'],
-                'email' => $input['email'],
-            ]);
+            if (isset($request->profile_image)) {
+                $imageName = time().'.'.$request->profile_image->extension();
+                $request->profile_image->move(public_path('profile_images'), $imageName);
+          
+                $array = [
+                    'name' => $input['name'],
+                    'email' => $input['email'],
+                    'mobile' => $input['mobile'],
+                    'last_name' => $input['last_name'],
+                    'profile_image' =>  $imageName,
+                ];
+            } else {
+                $array = [
+                    'name' => $input['name'],
+                    'email' => $input['email'],
+                    'mobile' => $input['mobile'],
+                    'last_name' => $input['last_name'],
+                ];
+            }
+       
+            $user->update($array);
 
 
             return redirect()->back()->with("success", "Record successfully changed!");

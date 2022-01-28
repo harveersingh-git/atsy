@@ -317,7 +317,7 @@ The plugin allso adds the following methods to the plot object:
 
                 var c = $.color.parse(o.selection.color);
 
-                ctx.strokeStyle = c.scale('a', 0.8).toString();
+                ctx.strokEstyle = c.scale('a', 0.8).toString();
                 ctx.lineWidth = 1;
                 ctx.lineJoin = o.selection.shape;
                 ctx.fillStyle = c.scale('a', 0.4).toString();

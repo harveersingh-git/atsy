@@ -256,14 +256,14 @@ shadowSize and lineWidth are derived as well from the points series.
                     if (lw > 0 && sw > 0) {
                         var w = sw / 2;
                         ctx.lineWidth = w;
-                        ctx.strokeStyle = "rgba(0,0,0,0.1)";
+                        ctx.strokEstyle = "rgba(0,0,0,0.1)";
                         drawError(ctx, err[e], x, y, upper, lower, drawUpper, drawLower, radius, w + w/2, minmax);
 
-                        ctx.strokeStyle = "rgba(0,0,0,0.2)";
+                        ctx.strokEstyle = "rgba(0,0,0,0.2)";
                         drawError(ctx, err[e], x, y, upper, lower, drawUpper, drawLower, radius, w/2, minmax);
                     }
 
-                    ctx.strokeStyle = err[e].color? err[e].color: s.color;
+                    ctx.strokEstyle = err[e].color? err[e].color: s.color;
                     ctx.lineWidth = lw;
                     //draw it
                     drawError(ctx, err[e], x, y, upper, lower, drawUpper, drawLower, radius, 0, minmax);

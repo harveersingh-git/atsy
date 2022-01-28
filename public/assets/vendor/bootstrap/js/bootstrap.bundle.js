@@ -2853,7 +2853,7 @@
    * @argument {Object} options - Modifiers configuration and options
    * @returns {Object} The data object, properly modified
    */
-  function computeStyle(data, options) {
+  function computEstyle(data, options) {
     var x = options.x,
         y = options.y;
     var popper = data.offsets.popper;
@@ -2864,7 +2864,7 @@
       return modifier.name === 'applyStyle';
     }).gpuAcceleration;
     if (legacyGpuAccelerationOption !== undefined) {
-      console.warn('WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!');
+      console.warn('WARNING: `gpuAcceleration` option moved to `computEstyle` modifier and will not be supported in future versions of Popper.js!');
     }
     var gpuAcceleration = legacyGpuAccelerationOption !== undefined ? legacyGpuAccelerationOption : options.gpuAcceleration;
 
@@ -3877,13 +3877,13 @@
      * @memberof modifiers
      * @inner
      */
-    computeStyle: {
+    computEstyle: {
       /** @prop {number} order=850 - Index used to define the order of execution */
       order: 850,
       /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
       enabled: true,
       /** @prop {ModifierFn} */
-      fn: computeStyle,
+      fn: computEstyle,
       /**
        * @prop {Boolean} gpuAcceleration=true
        * If true, it uses the CSS 3D transformation to position the popper.
@@ -3929,7 +3929,7 @@
       /** @prop {Function} */
       onLoad: applyStyleOnLoad,
       /**
-       * @deprecated since version 1.10.0, the property moved to `computeStyle` modifier
+       * @deprecated since version 1.10.0, the property moved to `computEstyle` modifier
        * @prop {Boolean} gpuAcceleration=true
        * If true, it uses the CSS 3D transformation to position the popper.
        * Otherwise, it will use the `top` and `left` properties

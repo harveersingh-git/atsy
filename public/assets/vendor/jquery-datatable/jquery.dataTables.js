@@ -5188,7 +5188,7 @@
 			header         = $(settings.nTHead),
 			table          = $(settings.nTable),
 			tableEl        = table[0],
-			tableStyle     = tableEl.style,
+			tablEstyle     = tableEl.style,
 			footer         = settings.nTFoot ? $(settings.nTFoot) : null,
 			browser        = settings.oBrowser,
 			ie67           = browser.bScrollOversize,
@@ -5270,7 +5270,7 @@
 		sanityWidth = table.outerWidth();
 		if ( scrollX === "" ) {
 			// No x scrolling
-			tableStyle.width = "100%";
+			tablEstyle.width = "100%";
 	
 			// IE7 will make the width of the table when 100% include the scrollbar
 			// - which is shouldn't. When there is a scrollbar we need to take this
@@ -5278,7 +5278,7 @@
 			if ( ie67 && (table.find('tbody').height() > divBodyEl.offsetHeight ||
 				divBody.css('overflow-y') == "scroll")
 			) {
-				tableStyle.width = _fnStringToCss( table.outerWidth() - barWidth);
+				tablEstyle.width = _fnStringToCss( table.outerWidth() - barWidth);
 			}
 	
 			// Recalculate the sanity width
@@ -5286,7 +5286,7 @@
 		}
 		else if ( scrollXInner !== "" ) {
 			// legacy x scroll inner has been given - use it
-			tableStyle.width = _fnStringToCss(scrollXInner);
+			tablEstyle.width = _fnStringToCss(scrollXInner);
 	
 			// Recalculate the sanity width
 			sanityWidth = table.outerWidth();
@@ -5368,7 +5368,7 @@
 			if ( ie67 && (divBodyEl.scrollHeight >
 				divBodyEl.offsetHeight || divBody.css('overflow-y') == "scroll")
 			) {
-				tableStyle.width = _fnStringToCss( correction-barWidth );
+				tablEstyle.width = _fnStringToCss( correction-barWidth );
 			}
 	
 			// And give the user a warning that we've stopped the table getting too small

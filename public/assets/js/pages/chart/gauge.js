@@ -27,11 +27,11 @@ var opts = {
         fractionDigits: 0
     },
     staticZones: [
-        {strokeStyle: "#F03E3E", min: 0, max: 200},
-        {strokeStyle: "#FFDD00", min: 200, max: 500},
-        {strokeStyle: "#30B32D", min: 500, max: 2100},
-        {strokeStyle: "#FFDD00", min: 2100, max: 2800},
-        {strokeStyle: "#F03E3E", min: 2800, max: 3000}
+        {strokEstyle: "#F03E3E", min: 0, max: 200},
+        {strokEstyle: "#FFDD00", min: 200, max: 500},
+        {strokEstyle: "#30B32D", min: 500, max: 2100},
+        {strokEstyle: "#FFDD00", min: 2100, max: 2800},
+        {strokEstyle: "#F03E3E", min: 2800, max: 3000}
     ],
     limitMax: false,
     limitMin: false,
@@ -66,13 +66,13 @@ var opts = {
         fractionDigits: 0
     },
     staticZones: [
-        {strokeStyle: "rgb(255,0,0)", min: 0, max: 500, height: 1.2},
-        {strokeStyle: "rgb(200,100,0)", min: 500, max: 1000, height: 1.1},
-        {strokeStyle: "rgb(150,150,0)", min: 1000, max: 1500, height: 1},
-        {strokeStyle: "rgb(100,200,0)", min: 1500, max: 2000, height: 0.9},
-        {strokeStyle: "rgb(0,255,0)", min: 2000, max: 3100, height: 0.8},
-        {strokeStyle: "rgb(80,255,80)", min: 3100, max: 3500, height: 0.7},
-        {strokeStyle: "rgb(130,130,130)", min: 2470, max: 2530, height: 1}        
+        {strokEstyle: "rgb(255,0,0)", min: 0, max: 500, height: 1.2},
+        {strokEstyle: "rgb(200,100,0)", min: 500, max: 1000, height: 1.1},
+        {strokEstyle: "rgb(150,150,0)", min: 1000, max: 1500, height: 1},
+        {strokEstyle: "rgb(100,200,0)", min: 1500, max: 2000, height: 0.9},
+        {strokEstyle: "rgb(0,255,0)", min: 2000, max: 3100, height: 0.8},
+        {strokEstyle: "rgb(80,255,80)", min: 3100, max: 3500, height: 0.7},
+        {strokEstyle: "rgb(130,130,130)", min: 2470, max: 2530, height: 1}        
     ],
     limitMax: false,
     limitMin: false,

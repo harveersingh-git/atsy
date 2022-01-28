@@ -26,3 +26,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::any('/change-password', [App\Http\Controllers\UserController::class, 'changePassword'])->name('changePassword');
 Route::any('/edit-profile', [App\Http\Controllers\UserController::class, 'editProfile'])->name('editProfile');
+Route::any('/etsy-config', [App\Http\Controllers\EtsyController::class, 'etsyConfig'])->name('etsyConfig');
+

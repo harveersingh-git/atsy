@@ -174,12 +174,12 @@ jQuery(document).ready(function($){
 	}
 
 	function getTranslateValue(timeline) {
-		var timelineStyle = window.getComputedStyle(timeline.get(0), null),
-			timelineTranslate = timelineStyle.getPropertyValue("-webkit-transform") ||
-         		timelineStyle.getPropertyValue("-moz-transform") ||
-         		timelineStyle.getPropertyValue("-ms-transform") ||
-         		timelineStyle.getPropertyValue("-o-transform") ||
-         		timelineStyle.getPropertyValue("transform");
+		var timelinEstyle = window.getComputedStyle(timeline.get(0), null),
+			timelineTranslate = timelinEstyle.getPropertyValue("-webkit-transform") ||
+         		timelinEstyle.getPropertyValue("-moz-transform") ||
+         		timelinEstyle.getPropertyValue("-ms-transform") ||
+         		timelinEstyle.getPropertyValue("-o-transform") ||
+         		timelinEstyle.getPropertyValue("transform");
 
         if( timelineTranslate.indexOf('(') >=0 ) {
         	var timelineTranslate = timelineTranslate.split('(')[1];

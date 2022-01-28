@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>:: HexaBit :: Home</title>
+    <title>:: Etsy Connector :: Home</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="description" content="HexaBit Bootstrap 4x Admin Template">
+    <meta name="description" content="Etsy Connector Bootstrap 4x Admin Template">
     <meta name="author" content="WrapTheme, www.thememakker.com">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -31,7 +31,7 @@
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
-            <div class="m-t-30"><img src="{{asset('assets/images/icon-light.svg')}}" width="48" height="48" alt="HexaBit"></div>
+            <div class="m-t-30"><img src="{{asset('assets/images/icon-light.svg')}}" width="48" height="48" alt="Etsy Connector"></div>
             <p>Please wait...</p>
         </div>
     </div>
